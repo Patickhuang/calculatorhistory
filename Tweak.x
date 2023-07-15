@@ -81,10 +81,10 @@ int indexOf(NSString *string, NSString *target) {
 	self.view.backgroundColor = [UIColor colorWithRed: 0.20 green: 0.20 blue: 0.20 alpha: 1.00];
 	_navBar = [[UINavigationBar alloc] init];
 	UINavigationItem *navItem = [[UINavigationItem alloc] init];
-	navItem.title = @"History";
+	navItem.title = @"历史纪录";
 
 	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed)];
-	UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearButtonPressed)];
+	UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithTitle:@"清除" style:UIBarButtonItemStylePlain target:self action:@selector(clearButtonPressed)];
 	navItem.leftBarButtonItem = doneButton;
 	navItem.rightBarButtonItem = clearButton;
 
@@ -161,9 +161,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
 		NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[getDates() objectAtIndex:indexPath.row] doubleValue]];		
 		NSString *day = [[NSString alloc] init];
 		if([[NSCalendar currentCalendar] isDateInToday:date]) {
-			day = @"Today";
+			day = @"今天";
 		} else if([[NSCalendar currentCalendar] isDateInYesterday:date]) {
-			day = @"Yesterday";
+			day = @"昨天";
 		} else {
 			NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 			[dateFormatter setDateFormat:@"MM/dd/yy"];
