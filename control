@@ -1,8 +1,8 @@
 Package: com.fiore.calculatorhistory
-Name: CalculatorHistory
+Name: 计算器添加历史按钮(rootless)
 Version: 1.2
 Architecture: iphoneos-arm64
-Description: Calculator gains history!
+Description: 让自带计算器可以查看历史计算过程和结果
 Maintainer: Donato Fiore
 Author: Donato Fiore
 Section: Tweaks
